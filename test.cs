@@ -1,11 +1,8 @@
-string a = "Hi";
-string b = a;
-b = "Bye";
 
-Console.WriteLine(a);
-Console.WriteLine(b);
+List<int> numbers = new() { 1,2,3,4,5,6,7,8,9,10 };
 
-int[] arr = new int [3];
-int[] arr1 = arr;
-arr1[1] = 3;
-Console.WriteLine(arr[1]);
+var evennum = numbers.Where(n => n % 2 == 0).ToList();
+var evennumsquared = numbers.Where(n => n % 2 == 0).Select(n => n*n).ToList();
+
+Console.WriteLine(string.Join(", ",evennum));
+Console.WriteLine(string.Join(", ",evennumsquared));
